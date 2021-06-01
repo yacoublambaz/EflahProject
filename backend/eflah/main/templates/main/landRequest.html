@@ -1,0 +1,58 @@
+{% extends 'main/navbar.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta name = "viewport" content="width=device-width,initial-scale=1">
+    <title> Eflah | Submit a Request</title>
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/landRequest.css'%}">
+</head>
+<body>
+    <section class="sectionBx" style="background-color: rgb(242, 251, 242);">
+        <div class = "containerBx">
+            <div class="user signinBx">
+                <div class="imgBx">
+                    <img src="{% static 'images/Growing.jpg' %}"/>
+                </div>
+                <div class="formBx">
+                    <form>
+                        <h2> Become an Investor </h2>
+                        <input type="text" name="" placeholder="Full Name">
+                        <input type="text" name="" placeholder="Phone Number">
+                        <input type="text" name="" placeholder="National Number">
+                        <input type="text" name="" placeholder="How much are you willing to invest?">
+                        
+                        <input type="submit" name="" placeholder="login">
+                        <p class ="signup">Want to be a land owner?<a href = "#" onclick ="toggleForm()"> Submit a Request</a></p>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="user signupBx">
+                
+                <div class="formBx">
+                    <form>
+                        <h2> Become a Land Owner</h2>
+                        <input type="text" name="" placeholder="Full Name">
+                        <input type="text" name="" placeholder="Phone Number">
+                        <input type="text" name="" placeholder="National Number">
+                        <input type="text" name="" placeholder="Ownership Certificate Ref. Num.">
+                        <input type="text" name="" placeholder="Land Location and Space">
+
+                        <input type="submit" name="" placeholder="login">
+                        <p class ="signup">Want to be an Investor?<a href = "#" onclick ="toggleForm()"> Submit a Request</a></p>
+                    </form>
+                </div>
+                <div class="imgBx">
+                    <img src="{% static 'images/Planting.jpg'%}"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+     function toggleForm(){
+         var containerBx = document.querySelector('.containerBx');
+         containerBx.classList.toggle('active');
+     }
+    </script>
+</body>
+{% endblock content %}
